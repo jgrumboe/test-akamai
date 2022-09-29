@@ -10,8 +10,6 @@ jobs:
 #      - run: ls -l /tmp/akamai
 #      - run: /tmp/akamai install property-manager
       - name: Save API credentials
-        env:
-          EDGERC: ${secrets.AKAMAI_EDGERC}
-        run: echo -e "$EDGERC" > /home/runner/.edgerc
+        run: echo -e "${{secrets.AKAMAI_EDGERC}}" > /home/runner/.edgerc
       - run: cat /home/runner/.edgerc
 #      - run: /tmp/akamai pm lg
