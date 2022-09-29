@@ -12,5 +12,5 @@ jobs:
       - name: Save API credentials
         env:
           EDGERC: ${secrets.AKAMAI_EDGERC}
-        run: echo "$EDGERC" > /home/runner/.edgerc
+        run: echo -e "$EDGERC" > /home/runner/.edgerc
       - run: /tmp/akamai pm lg
