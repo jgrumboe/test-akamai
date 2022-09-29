@@ -5,6 +5,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: wget https://github.com/akamai/cli/releases/download/v1.5.2/akamai-v1.5.2-linuxamd64 -O /tmp/akamai-pm
-      - run: chmod +x /tmp/akamai-pm
-      - run: ls -l /tmp/akamai-pm
+      - run: wget https://github.com/akamai/cli/releases/download/v1.5.2/akamai-v1.5.2-linuxamd64 -O /tmp/akamai
+      - run: chmod +x /tmp/akamai
+      - run: ls -l /tmp/akamai
+      - run: /tmp/akamai install property-manager
