@@ -5,11 +5,10 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-#      - run: wget https://github.com/akamai/cli/releases/download/v1.5.2/akamai-v1.5.2-linuxamd64 -O /tmp/akamai
-#      - run: chmod +x /tmp/akamai
-#      - run: ls -l /tmp/akamai
-#      - run: /tmp/akamai install property-manager
+      - run: wget https://github.com/akamai/cli/releases/download/v1.5.2/akamai-v1.5.2-linuxamd64 -O /tmp/akamai
+      - run: chmod +x /tmp/akamai
+      - run: ls -l /tmp/akamai
+      - run: /tmp/akamai install property-manager
       - name: Save API credentials
         run: echo -e "${{secrets.AKAMAI_EDGERC}}" > /home/runner/.edgerc
-      - run: cat /home/runner/.edgerc
-#      - run: /tmp/akamai pm lg
+      - run: /tmp/akamai pm lg
