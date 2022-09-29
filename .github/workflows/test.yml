@@ -9,9 +9,5 @@ jobs:
       - run: chmod +x /tmp/akamai
       - run: ls -l /tmp/akamai
       - run: /tmp/akamai install property-manager
+      - run: printf "${secrets.AKAMAI_EDGERC}" > /home/runner/.edgerc
       - run: /tmp/akamai pm lg
-        env:
-          AKAMAI_PAPI_CLIENT_SECRET: ${secrets.AKAMAI_PAPI_CLIENT_SECRET}
-          AKAMAI_PAPI_HOST: ${secrets.AKAMAI_PAPI_HOST}
-          AKAMAI_PAPI_ACCESS_TOKEN: ${secrets.AKAMAI_PAPI_ACCESS_TOKEN}
-          AKAMAI_PAPI_CLIENT_TOKEN: ${secrets.AKAMAI_PAPI_CLIENT_TOKEN}
